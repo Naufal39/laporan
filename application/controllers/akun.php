@@ -20,7 +20,7 @@ class akun extends CI_Controller {
 
 	public function tambah_akun() {
 		
-		$kode_akun = $this->input->post('kode_akun');
+		// $kode_akun = $this->input->post('kode_akun');
 		$nama_akun = $this->input->post('nama_akun');
 		$rugi_laba = "Y";
 		$rugi_laban = "N";
@@ -31,13 +31,15 @@ class akun extends CI_Controller {
 
 			
 
-			$this->akun_model->insert($kode_akun,$nama_akun,$rugi_laba);
+			// $this->akun_model->insert($kode_akun,$nama_akun,$rugi_laba);
+			$this->akun_model->insert($nama_akun,$rugi_laba);
 			
 		}
 		else {
 			
 
-			$this->akun_model->insert2($kode_akun,$nama_akun,$rugi_laban);
+			// $this->akun_model->insert2($kode_akun,$nama_akun,$rugi_laban);
+			$this->akun_model->insert2($nama_akun,$rugi_laban);
 
 		}
 
@@ -53,7 +55,7 @@ class akun extends CI_Controller {
 	public function update_akun() {
 
 		$id_akun = $this->input->post('id_akun');
-		$kode_akun = $this->input->post('kode_akun');
+		// $kode_akun = $this->input->post('kode_akun');
 		$nama_akun = $this->input->post('nama_akun');
 
 		$rugi_laba = "Y";
@@ -65,13 +67,15 @@ class akun extends CI_Controller {
 
 			
 
-			$this->akun_model->update($id_akun,$kode_akun,$nama_akun,$rugi_laba);
+			// $this->akun_model->update($id_akun,$kode_akun,$nama_akun,$rugi_laba);
+			$this->akun_model->update($id_akun,$nama_akun,$rugi_laba);
 			
 		}
 		else {
 			
 
-			$this->akun_model->update2($id_akun,$kode_akun,$nama_akun,$rugi_laban);
+			// $this->akun_model->update2($id_akun,$kode_akun,$nama_akun,$rugi_laban);
+			$this->akun_model->update2($id_akun,$nama_akun,$rugi_laban);
 
 		}
 

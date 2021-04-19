@@ -1,7 +1,8 @@
 <?php
 	class laporan_model extends Ci_Model{
 		function laporan_pemasukan($bulan,$tahun){
-			return $this->db->query("select a.*,b.* from pemasukan a join akun b on a.kode_akun=b.kode_akun where month(a.tanggal_pemasukan)='$bulan' and year(a.tanggal_pemasukan)='$tahun'");
+			// return $this->db->query("select a.*,b.* from pemasukan a join akun b on a.kode_akun=b.kode_akun where month(a.tanggal_pemasukan)='$bulan' and year(a.tanggal_pemasukan)='$tahun'");
+			return $this->db->query("select * from pemasukan where month(tanggal_pemasukan)='$bulan' and year(tanggal_pemasukan)='$tahun'");
 		}
 
 		function laporan_pemasukan_besar($bulan,$tahun){

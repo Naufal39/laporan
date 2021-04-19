@@ -1,7 +1,7 @@
 <div class="form-horizontal">
 		
 		  <div class="control-group">
-		  	<legend>Laporan Pengeluaran </legend>
+		  	<legend>Laporan Bulanan </legend>
 			<label class="control-label">Bulan dan Tahun</label>
 			<div class="controls">
 			  <select id="bulan" style="width:90px;">

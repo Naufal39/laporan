@@ -2,7 +2,9 @@
 	class pemasukan_model extends Ci_Model{
 
 		function GetPemasukan(){
-			return $this->db->query("select a.*,date_format(a.tanggal_pemasukan,'%d %b %Y') as tanggal,b.* from pemasukan a join akun b on a.kode_akun =b.kode_akun order by a.id_pemasukan desc");
+			// return $this->db->query("select a.*,date_format(a.tanggal_pemasukan,'%d %b %Y') as tanggal,b.* from pemasukan a join akun b on a.kode_akun =b.kode_akun order by a.id_pemasukan desc");
+			return $this->db->query("select * from pemasukan");
+
 		}
 
 		function insert($insert){

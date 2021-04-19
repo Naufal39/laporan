@@ -2,7 +2,6 @@
 	<thead>
 		<tr bgcolor="#c1c1c5">
 			<th>No</th>
-			<th>Akun</th>
 			<th>Nama Pemasukan</th>
 			<th>Jumlah Pemasukan</th>
 			<th>Tanggal Pemasukan</th>
@@ -15,7 +14,6 @@
 			foreach ($laporan_pemasukan->result_array() as $tampil) { ?>
 			<tr>
 				<td><?php echo $no;?></td>
-				<td><?php echo $tampil['nama_akun']?></td>
 				<td><?php echo $tampil['nama_pemasukan']?></td>
 				<td><?php echo buatrp($tampil['jumlah_pemasukan']);?></td>
 				<td><?php echo $tampil['tanggal_pemasukan']?></td>

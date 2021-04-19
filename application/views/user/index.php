@@ -196,8 +196,7 @@ $(document).ready(function(){
 			  <select id="hak_akses">
 			  		<option value="">Silahkan Pilih</option>
 			  		<option value="admin">Admin</option>
-			  		<option value="operator_kecil">Operator Kas Kecil</option>
-			  		<option value="operator_besar">Operator Kas Besar</option>>
+			  		<option value="operator_kecil">Operator Pelabuhan</option>
 			  		<option value="user">User</option>
 			  </select>
 			</div>

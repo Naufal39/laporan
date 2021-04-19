@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Sistem Informasi Manajemen Keuangan Berkah Sistem</title>
+    <title>Sistem Laporan Bulanan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -109,11 +109,11 @@ $( "#loading").hide();
              <!--  <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li> -->
                <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Akun <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Master<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo base_url();?>akun">Akun Kecil</a></li> 
-                   <li><a href="<?php echo base_url();?>akun_besar">Akun Besar</a></li> 
-                  
+                   <!-- <li><a href="<?php echo base_url();?>akun_besar">Akun Besar</a></li> 
+                   -->
                 </ul>
               </li>
 
@@ -121,19 +121,20 @@ $( "#loading").hide();
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pemasukan <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo base_url();?>pemasukan">Kas Kecil</a></li>
-                        <li><a href="<?php echo base_url();?>pemasukan_besar">Kas Besar</a></li> 
-                  
+
+              <!--           <li><a href="<?php echo base_url();?>pemasukan_besar">Kas Besar</a></li> 
+               -->    
                 </ul>
               </li>
 
-               <li class="dropdown">
+              <!--  <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pengeluaran <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                    <li><a href="<?php echo base_url();?>pengeluaran">Kas Kecil</a></li>
                 <li><a href="<?php echo base_url();?>pengeluaran_besar">Kas Besar</a></li>
                   
                 </ul>
-              </li>
+              </li> -->
 
 
 
@@ -143,7 +144,7 @@ $( "#loading").hide();
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Laporan  <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="<?php echo base_url();?>laporan/laporan_pemasukan">Pemasukan kas Kecil</a></li>                       
-                        <li><a href="<?php echo base_url();?>laporan/laporan_pemasukan_besar">Pemasukan Kas Besar</a></li>                       
+                        <!-- <li><a href="<?php echo base_url();?>laporan/laporan_pemasukan_besar">Pemasukan Kas Besar</a></li>                       
                         <li><a href="<?php echo base_url();?>laporan/laporan_pengeluaran">Pengeluaran kas Kecil</a></li>         
                         <li><a href="<?php echo base_url();?>laporan/laporan_pengeluaran">Pengeluaran Kas Besar</a></li> 
                   <li class="divider"></li>         
@@ -151,7 +152,7 @@ $( "#loading").hide();
                   <li><a href="<?php echo base_url();?>laporan/laporan_umum_besar">Umum Besar</a></li>         
                   <li><a href="<?php echo base_url();?>laporan/laporan_pemasukan_rekening">Rekening</a></li> 
                   <li><a href="<?php echo base_url();?>laporan/laporan_rugi_laba">Rugi / Laba</a></li>
-                  
+                   -->
                 </ul>
               </li>
 
@@ -190,7 +191,14 @@ $( "#loading").hide();
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pemasukan <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="<?php echo base_url();?>pemasukan">Kas Kecil</a></li>
+                    <li><a href="<?php echo base_url();?>pemasukan">Kas Kecil</a>
+                    <li><a href="<?php echo base_url();?>akun">Muatan</a></li>
+                    <li><a href="<?php echo base_url();?>akun">Jenis Kapal</a></li>
+                    <li><a href="<?php echo base_url();?>akun">Dermaga</a></li>
+                    <li><a href="<?php echo base_url();?>akun">Muatan</a></li>
+                    <li><a href="<?php echo base_url();?>akun">Kegiatan</a></li>
+
+                    </li>
                         
                   
                 </ul>
@@ -213,10 +221,10 @@ $( "#loading").hide();
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Laporan  <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="<?php echo base_url();?>laporan/laporan_pemasukan">Pemasukan kas Kecil</a></li>                                             
-                        <li><a href="<?php echo base_url();?>laporan/laporan_pengeluaran">Pengeluaran kas Kecil</a></li>         
+                        <!-- <li><a href="<?php echo base_url();?>laporan/laporan_pengeluaran">Pengeluaran kas Kecil</a></li>         
                   <li class="divider"></li>         
                   <li><a href="<?php echo base_url();?>laporan/laporan_umum">Umum</a></li>                
-                  
+                   -->
                   
                 </ul>
               </li>

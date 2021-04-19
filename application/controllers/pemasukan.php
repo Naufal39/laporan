@@ -34,7 +34,7 @@ class pemasukan extends CI_Controller {
 			$saldo=$tampil['saldo_total'];
 		}
 		$saldo_akhir=$this->input->post('jumlah_pemasukan')+$saldo;
-		$insert_pemasukan=array('kode_akun'=>$this->input->post('kode_akun'),
+		$insert_pemasukan=array(
 				'nama_pemasukan'=>$this->input->post('nama_pemasukan'),
 				'jumlah_pemasukan'=>$this->input->post('jumlah_pemasukan'),
 				'tanggal_pemasukan'=>$this->input->post('tanggal_pemasukan'),

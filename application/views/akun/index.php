@@ -17,7 +17,7 @@ $(document).ready(function(){
 	tampil();
 
 	function kosong() {
-		$("#kode_akun").val("");
+		// $("#kode_akun").val("");
 		$("#nama_akun").val("");
 		$("#id_akun").val("");
 		$("#cek").prop('checked',false) ;
@@ -25,7 +25,7 @@ $(document).ready(function(){
 	}
 
 	$("#simpan").click(function(){
-		var kode_akun = $("#kode_akun").val();
+		// var kode_akun = $("#kode_akun").val();
 		var nama_akun = $("#nama_akun").val();
 
 		if ($('#cek').is(':checked')) {
@@ -35,11 +35,8 @@ $(document).ready(function(){
 			cek="rugi_laba";
 		}
 
-		if (kode_akun=="") {
-			alert('Kode Akun Tidak Boleh Kosong');
-			$("#kode_akun").focus();
-		}
-		else if (nama_akun=="") {
+		
+		if (nama_akun=="") {
 			alert('Nama Akun Tidak BOleh Kosong');
 			$("#nama_akun").focus();
 		}
@@ -47,7 +44,8 @@ $(document).ready(function(){
 			$.ajax({
 			type:"POST",
 			url:"<?php echo base_url();?>akun/tambah_akun",
-			data:"kode_akun="+kode_akun+"&nama_akun="+nama_akun+"&cek="+cek,
+			// data:"kode_akun="+kode_akun+"&nama_akun="+nama_akun+"&cek="+cek,
+			data:"nama_akun="+nama_akun+"&cek="+cek,
 			success : function(data) {
 
 				$("#tampil").fadeOut("slow");
@@ -70,7 +68,7 @@ $(document).ready(function(){
 	$("#update").click(function(){
 
 		var id_akun = $("#id_akun").val();
-		var kode_akun = $("#kode_akun").val();
+		// var kode_akun = $("#kode_akun").val();
 		var nama_akun = $("#nama_akun").val();
 
 		if ($('#cek').is(':checked')) {
@@ -83,7 +81,8 @@ $(document).ready(function(){
 		$.ajax({
 			type:"POST",
 			url:"<?php echo base_url();?>akun/update_akun",
-			data:"kode_akun="+kode_akun+"&nama_akun="+nama_akun+"&id_akun="+id_akun+"&cek="+cek,
+			// data:"kode_akun="+kode_akun+"&nama_akun="+nama_akun+"&id_akun="+id_akun+"&cek="+cek,
+			data:"nama_akun="+nama_akun+"&id_akun="+id_akun+"&cek="+cek,
 			success : function(data) {
 
 				$("#tampil").fadeOut("slow");
@@ -104,7 +103,7 @@ $(document).ready(function(){
 	});
 
 	$("#edit").live('click',function(){
-		var kode_akun=$(this).attr('kode_akun');
+		// var kode_akun=$(this).attr('kode_akun');
 		var nama_akun=$(this).attr('nama_akun');
 		var id_akun=$(this).attr('id_akun');
 		var rugi_laba=$(this).attr('rugi_laba');
@@ -120,7 +119,7 @@ $(document).ready(function(){
 
 		}
 								
-		$("#kode_akun").val(kode_akun);
+		// $("#kode_akun").val(kode_akun);
 		$("#nama_akun").val(nama_akun);
 		$("#id_akun").val(id_akun);
 		$("#rugi_laba").val(rugi_laba);
@@ -161,28 +160,28 @@ $(document).ready(function(){
 				}									
 	});
 
-	$("#nama_akun").live('click',function(){
-		var kode_akun = $("#kode_akun").val();
+	// $("#nama_akun").live('click',function(){
+	// 	var kode_akun = $("#kode_akun").val();
 
-		$.ajax({
+	// 	$.ajax({
 
-			type:"POST",
-			url : "<?php echo base_url();?>akun/cek_kode_akun",
-			data : "kode_akun="+kode_akun,
-			success : function (data) {
-				var hasil = data;
-				if (hasil!="") {
-					alert('Kode akun Sudah Dipakai');
-					 $("#kode_akun").val(hasil);
-					 $("#kode_akun").focus();
-				}
+	// 		type:"POST",
+	// 		url : "<?php echo base_url();?>akun/cek_kode_akun",
+	// 		data : "kode_akun="+kode_akun,
+	// 		success : function (data) {
+	// 			var hasil = data;
+	// 			if (hasil!="") {
+	// 				alert('Kode akun Sudah Dipakai');
+	// 				 $("#kode_akun").val(hasil);
+	// 				 $("#kode_akun").focus();
+	// 			}
 
-			}
+	// 		}
 
-		});
+	// 	});
 
 
-	});
+	// });
 
 
 
@@ -193,10 +192,10 @@ $(document).ready(function(){
 		
 		  <div class="control-group">
 		  	<legend>Data Master Akun Kecil</legend>
-			<label class="control-label">Kode Akun</label>
+			<!-- <label class="control-label">Kode Akun</label>
 			<div class="controls">
 			  <input type="text" class="span" name="kode_akun" placeholder="Kode Akun" id="kode_akun">
-			</div>
+			</div> -->
 		  </div>
 		  <div class="control-group">
 			<label class="control-label">Nama akun</label>
@@ -205,10 +204,10 @@ $(document).ready(function(){
 			</div>
 		  </div>
 		  <div class="control-group">
-		  	<div class="controls">
+		  	<!-- <div class="controls">
 		  		<input type="checkbox" name="cek" value="cek" id="cek"> Pilih Checkbox jika akun tidak termasuk dalam rugi/laba
 
-		  	</div>
+		  	</div> -->
 		  </div>
 		  <input type="hidden" id="id_akun" >
 		  <input type="hidden"  id="rugi_laba">
@@ -225,8 +224,3 @@ $(document).ready(function(){
 
 <div id="tampil">
 </div>
-
- 
-
-
-

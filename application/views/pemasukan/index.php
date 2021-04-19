@@ -17,28 +17,28 @@ $(document).ready(function(){
 	tampil();
 
 	function kosong() {
-		$("#kode_akun").val("");
+		// $("#kode_akun").val("");
 		$("#nama_pemasukan").val("");
 		$("#jumlah_pemasukan").val("");
 		$("#tanggal").val("<?php echo date ('Y-m-d');?>");
 		$("#keterangan").val("");
-		$("#kode_akun").val("").trigger("liszt:updated");
+		// $("#kode_akun").val("").trigger("liszt:updated");
 
 	}
 	kosong();
 
 	$("#simpan").click(function(){
-		var kode_akun = $("#kode_akun").val();
+		// var kode_akun = $("#kode_akun").val();
 		var nama_pemasukan = $("#nama_pemasukan").val();
 		var jumlah_pemasukan = $("#jumlah_pemasukan").val();
 		var tanggal = $("#tanggal").val();
 		var keterangan = $("#keterangan").val();
 
-		if (kode_akun=="") {
-			alert('Kode Akun Tidak Boleh Kosong');
-			$("#kode_akun").focus();
-		}
-		else if (nama_pemasukan=="") {
+		// if (kode_akun=="") {
+		// 	alert('Kode Akun Tidak Boleh Kosong');
+		// 	$("#kode_akun").focus();
+		// }
+		if (nama_pemasukan=="") {
 			alert('Nama Pemasukan Tidak Boleh Kosong');
 			$("#nama_pemasukan").focus();
 		}
@@ -58,7 +58,7 @@ $(document).ready(function(){
 			$.ajax({
 			type:"POST",
 			url:"<?php echo base_url();?>pemasukan/tambah_pemasukan",
-			data:"kode_akun="+kode_akun+"&nama_pemasukan="+nama_pemasukan+"&jumlah_pemasukan="+jumlah_pemasukan+"&tanggal_pemasukan="+tanggal+"&keterangan="+keterangan,
+			data:"nama_pemasukan="+nama_pemasukan+"&jumlah_pemasukan="+jumlah_pemasukan+"&tanggal_pemasukan="+tanggal+"&keterangan="+keterangan,
 			success : function(data) {
 
 				$("#tampil").fadeOut("slow");
@@ -73,17 +73,17 @@ $(document).ready(function(){
 	});
 
 	$("#update").click(function(){
-		var kode_akun = $("#kode_akun").val();
+		// var kode_akun = $("#kode_akun").val();
 		var nama_pemasukan = $("#nama_pemasukan").val();
 		var jumlah_pemasukan = $("#jumlah_pemasukan").val();
 		var tanggal = $("#tanggal").val();
 		var keterangan = $("#keterangan").val();
 		var id_pemasukan=$("#id_pemasukan").val();
-		if (kode_akun=="") {
-			alert('Kode Akun Tidak Boleh Kosong');
-			$("#kode_akun").focus();
-		}
-		else if (nama_pemasukan=="") {
+		// if (kode_akun=="") {
+		// 	alert('Kode Akun Tidak Boleh Kosong');
+		// 	$("#kode_akun").focus();
+		// }
+		if (nama_pemasukan=="") {
 			alert('Nama Pemasukan Tidak Boleh Kosong');
 			$("#nama_pemasukan").focus();
 		}
@@ -103,7 +103,7 @@ $(document).ready(function(){
 			$.ajax({
 			type:"POST",
 			url:"<?php echo base_url();?>pemasukan/edit_pemasukan",
-			data:"kode_akun="+kode_akun+"&nama_pemasukan="+nama_pemasukan+"&jumlah_pemasukan="+jumlah_pemasukan+"&tanggal_pemasukan="+tanggal+"&keterangan="+keterangan+"&id_pemasukan="+id_pemasukan,
+			data:"nama_pemasukan="+nama_pemasukan+"&jumlah_pemasukan="+jumlah_pemasukan+"&tanggal_pemasukan="+tanggal+"&keterangan="+keterangan+"&id_pemasukan="+id_pemasukan,
 			success : function(data) {
 
 				$("#tampil").fadeOut("slow");
@@ -123,7 +123,7 @@ $(document).ready(function(){
 	});
 
 	$("#edit").live('click',function(){
-		var kode_akun=$(this).attr('kode_akun');
+		// var kode_akun=$(this).attr('kode_akun');
 		var nama_pemasukan=$(this).attr('nama_pemasukan');
 		var jumlah_pemasukan=$(this).attr('jumlah_pemasukan');
 		var tanggal_pemasukan=$(this).attr('tanggal_pemasukan');
@@ -134,7 +134,7 @@ $(document).ready(function(){
 		$("#batal").show();
 		$("#batal2").hide();
 								
-		$("#kode_akun").val(kode_akun).trigger("liszt:updated");
+		// $("#kode_akun").val(kode_akun).trigger("liszt:updated");
 		$("#nama_pemasukan").val(nama_pemasukan);
 		$("#jumlah_pemasukan").val(jumlah_pemasukan);
 		$("#tanggal").val(tanggal_pemasukan);
@@ -205,7 +205,7 @@ $('#tanggal_pemasukan').datepicker();
 		
 		  <div class="control-group">
 		  	<legend>Pemasukan Kas Kecil</legend>
-			<label class="control-label">Kode Akun</label>
+			<!-- <label class="control-label">Kode Akun</label>
 			<div class="controls">
 			  <select data-placeholder="Pilih Akun..." id="kode_akun" name="kode_akun" class="chzn-select">
 			  	<option value=""></option>
@@ -216,7 +216,7 @@ $('#tanggal_pemasukan').datepicker();
 			  	<?php	}
 			  	?>
 			  </select>
-			</div>
+			</div> -->
 		  </div>
 		  <div class="control-group">
 			<label class="control-label">Nama Pemasukan</label>
