@@ -249,19 +249,19 @@ $('#awal').datepicker();
 		
 		  <div class="control-group">
 		  	<legend>Pengeluaran Kas Kecil</legend>
-			<label class="control-label" for="nama_akun">Nama Akun</label>
+			<label class="control-label" for="nama_akun">Jenis Komoditas</label>
 			<div class="controls">
-			  <select data-placeholder="Pilih Akun..." class="chzn-select"  tabindex="2" name="kode_akun" id="kode_akun">
+			  <select data-placeholder="Pilih Komoditas..." class="chzn-select"  tabindex="2" name="kode_akun" id="kode_akun">
 			  	<option value=""></option>
 			  	 	
 
 				<?php
-					foreach($data_akun->result_array() as $d)
+					foreach($data_muatan->result_array() as $d)
 					{
 						
 				?>
 					
-					<option value="<?php echo $d['kode_akun']; ?>"><?php echo $d['nama_akun']; ?></option>
+					<option value="<?php echo $d['jenis_muatan']; ?>"><?php echo $d['jenis_muatan']; ?></option>
 				<?php
 						
 					}

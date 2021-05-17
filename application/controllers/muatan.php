@@ -1,16 +1,16 @@
 <?php
-class akun extends CI_Controller {
+class muatan extends CI_Controller {
 
 	public function __construct() {
             parent::__construct();
-            $this->load->model('akun_model');
+            $this->load->model('muatan_model');
             // Your own constructor code
     }
 
     public function index(){
 		$username=$this->session->userdata('username');
 		if($username!=""){
-			$this->template->load('template','akun/index');
+			$this->template->load('template','muatan/index');
 		}
 		else{
 			$this->session->set_flashdata('confirm','Silahkan Login Dahulu');
@@ -18,10 +18,10 @@ class akun extends CI_Controller {
 		}
 	}
 
-	public function tambah_akun() {
+	public function tambah_muatan() {
 		
 		// $kode_akun = $this->input->post('kode_akun');
-		$nama_akun = $this->input->post('nama_akun');
+		$jenis_muatan = $this->input->post('jenis_muatan');
 		// $rugi_laba = "Y";
 		// $rugi_laban = "N";
 
@@ -32,7 +32,7 @@ class akun extends CI_Controller {
 			
 
 			// $this->akun_model->insert($kode_akun,$nama_akun,$rugi_laba);
-			$this->akun_model->insert($nama_akun,$rugi_laba);
+			$this->muatan_model->insert($jenis_muatan);
 			
 		}
 		else {
@@ -45,50 +45,33 @@ class akun extends CI_Controller {
 
 	}
 
-	public function tampil_akun() {
+	public function tampil_muatan() {
 
-		$data['data_akun'] = $this->akun_model->GetAkun();
+		$data['data_muatan'] = $this->muatan_model->GetMuatan();
 		
-		$this->load->view('akun/tampil',$data);
+		$this->load->view('muatan/tampil',$data);
 	}
 
-	public function update_akun() {
+	public function update_muatan() {
 
-		$id_akun = $this->input->post('id_akun');
+		$id_akun = $this->input->post('id_muatan');
 		// $kode_akun = $this->input->post('kode_akun');
-		$nama_akun = $this->input->post('nama_akun');
+		$jenis_muatan = $this->input->post('jenis_muatan');
 
-		$rugi_laba = "Y";
-		$rugi_laban = "N";
-
-		$cek = $this->input->post('cek');
-
-		if ($cek=="rugi_laba") {
-
-			
 
 			// $this->akun_model->update($id_akun,$kode_akun,$nama_akun,$rugi_laba);
-			$this->akun_model->update($id_akun,$nama_akun,$rugi_laba);
-			
-		}
-		else {
-			
+			$this->muatan_model->update($id_muatan,$jenis_muatan);
 
-			// $this->akun_model->update2($id_akun,$kode_akun,$nama_akun,$rugi_laban);
-			$this->akun_model->update2($id_akun,$nama_akun,$rugi_laban);
 
-		}
-
-		
 
 
 	}
 
-	public function delete_akun() {
+	public function delete_muatan() {
 
-		$id_akun = $this->input->post('id_akun');
+		$id_muatan = $this->input->post('id_muatan');
 
-		$this->akun_model->delete($id_akun);
+		$this->muatan_model->delete($id_muatan);
 	}
 
 	public function cek_kode_akun() {

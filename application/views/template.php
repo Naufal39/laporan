@@ -189,10 +189,10 @@ $( "#loading").hide();
                
 
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pemasukan <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data Master <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="<?php echo base_url();?>pemasukan">Kas Kecil</a>
-                    <li><a href="<?php echo base_url();?>akun">Muatan</a></li>
+                    <li><a href="<?php echo base_url();?>muatan">Muatan</a></li>
                     <li><a href="<?php echo base_url();?>akun">Jenis Kapal</a></li>
                     <li><a href="<?php echo base_url();?>akun">Dermaga</a></li>
                     <li><a href="<?php echo base_url();?>akun">Muatan</a></li>

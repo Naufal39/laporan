@@ -9,12 +9,14 @@ class Pengeluaran extends CI_Controller {
 		 $this->load->model('pemasukan_besar_model');
 		 $this->load->model('saldo_model');
 		 $this->load->model('saldo_besar_model');
+		 $this->load->model('muatan_model');
 	}
 
 	 public function index(){
 		$username=$this->session->userdata('username');
 		if($username!=""){
 			$data['data_akun'] = $this->akun_model->GetAkun();
+			$data['data_muatan'] = $this->muatan_model->GetMuatan();
 			$data['data_saldo'] = $this->saldo_model->getsaldo();
 			$data['data_saldo_besar'] = $this->saldo_besar_model->getsaldo();
 			$this->template->load('template','pengeluaran/index',$data);
